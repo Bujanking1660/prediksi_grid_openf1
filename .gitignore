@@ -1,0 +1,44 @@
+# ── Virtual environment ────────────────────────────────────────────
+venvf1/
+venv/
+.venv/
+env/
+ENV/
+
+# ── Data mentah / cache API (bisa di-fetch ulang) ─────────────────
+data/raw/
+data/*.parquet
+*.parquet
+_fetch_log.csv
+
+# ── Model artifacts ────────────────────────────────────────────────
+outputs/models/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# ── Python ─────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Notebook ───────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Rahasia & lokal ────────────────────────────────────────────────
+.env
+.env.*
+*.log
+
+# ── OS / editor ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,27 @@
+api:
+  base_url: "https://api.openf1.org/v1"
+  timeout_seconds: 30
+  max_retries: 3
+  rate_limit_per_minute: 30
+
+data:
+  years: [2023, 2024, 2025, 2026]
+  circuit_key: 39
+  circuit_short_name: "Monza"
+  include_sprint: false
+  session_names:
+    - "Practice 1"
+    - "Practice 2"
+    - "Practice 3"
+    - "Qualifying"
+
+paths:
+  raw: "data/raw"
+  driver_quali: "data/driver_quali.csv"
+  quali_lap: "data/quali_lap.csv"
+  outputs: "outputs"
+  models: "outputs/models"
+
+model:
+  random_seed: 42
+  test_years: [2024, 2025, 2026]

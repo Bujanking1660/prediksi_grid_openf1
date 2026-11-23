@@ -1,0 +1,58 @@
+{
+  "features": [
+    "fp_best_gap",
+    "fp_best_rank",
+    "fp_median_gap",
+    "hist_grid_season",
+    "hist_n"
+  ],
+  "target": "grid_position",
+  "seed": 42,
+  "years": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "train_test_splits": [
+    {
+      "train": [
+        2023
+      ],
+      "test_year": 2024
+    },
+    {
+      "train": [
+        2023,
+        2024
+      ],
+      "test_year": 2025
+    },
+    {
+      "train": [
+        2023,
+        2024,
+        2025
+      ],
+      "test_year": 2026
+    }
+  ],
+  "ridge_alphas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "selected_alpha": 0.001,
+  "selected_model_validation": "Ridge",
+  "models_compared": [
+    "Ridge",
+    "RandomForest",
+    "HistGB",
+    "XGBoost"
+  ],
+  "ranking": "rank unik per meeting_key (method=first)",
+  "evaluation": "metrik per weekend, lalu rata-rata"
+}
